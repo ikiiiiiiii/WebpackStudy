@@ -1,0 +1,103 @@
+<template>
+    <div class="app-container">
+
+        <!-- 顶部区域 -->
+        <div class="top">
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container-fluid">
+	            <div class="navbar-header top2">
+		            <a class="navbar-brand" href="#">这是一个导航栏</a>
+	            </div>
+
+	            <div class="top1">
+		            <ul class="nav navbar-nav navbar-right nav-pills">
+			            <li class="active"><a href="#">栏目1</a></li>
+			            <li><a href="#">栏目二</a></li>
+			            <li class="dropdown">
+				            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					            栏目三：分栏区
+					            <b class="caret"></b>
+				            </a>
+				        <ul class="dropdown-menu">
+					        <li><a href="#">分栏一</a></li>
+					        <li><a href="#">分栏二</a></li>
+					        <li><a href="#">分栏三</a></li>
+					        <li class="divider"></li>
+					        <li><a href="#">分离的链接</a></li>
+					        <li class="divider"></li>
+					        <li><a href="#">另一个分离的链接</a></li>
+				        </ul>
+			            </li>
+		            </ul>
+	            </div>
+	        </div>
+        </nav>
+		</div>
+
+
+        <!-- 中间 路由 区域 -->
+
+        <!-- 侧边栏区域 -->
+	<div class="left">
+		<ul class="nav nav-pills nav-stacked">
+            <li><a href="#"><span class="glyphicon glyphicon-star"></span><br/>首页</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-edit"></span><br/>分栏1</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-share"></span><br/>分栏2</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span><br/>分栏3</a></li>
+        </ul>
+	</div>
+
+
+
+
+	<h1>123</h1>	
+    </div>
+</template>
+
+<script>
+
+</script>
+
+<style>
+/* 修改导航栏高度 */
+.top1 .navbar-nav > li > a{
+    padding-top:30px ; 
+    padding-bottom:0 ;
+    height: 80px;
+}
+.top .navbar {
+    min-height:50px;
+}
+.top2 .navbar-brand {
+    padding-top:30px ; 
+    padding-bottom:0 ;
+	font-size: 25px;
+}
+
+/* 防止导航栏遮住页面内容 */
+.app-container{
+	padding-top: 80px;
+	padding-left: 150px;
+}
+
+/* 左侧菜单栏样式 */
+.left {
+	position:fixed;
+	top:80px;
+	left:0;
+	width:120px;
+	height:100%;
+	margin-right: 20px;
+	background-color:#373737;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px;
+}
+.nav li a{
+	color:slateblue;
+}
+.nav li a:hover {
+	background-color: darkslateblue;
+	color: #ffffff;
+}
+</style>
