@@ -11,7 +11,7 @@
 
 	            <div class="top1">
 		            <ul class="nav navbar-nav navbar-right nav-pills">
-			            <li class="active"><a href="#">栏目1</a></li>
+			            <li class="active"><a href="#">home</a></li>
 			            <li><a href="#">栏目二</a></li>
 			            <li class="dropdown">
 				            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -36,21 +36,37 @@
 
 
         <!-- 中间 路由 区域 -->
+		<router-view></router-view>
 
         <!-- 侧边栏区域 -->
 	<div class="left">
 		<ul class="nav nav-pills nav-stacked">
-            <li><a href="#"><span class="glyphicon glyphicon-star"></span><br/>首页</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-edit"></span><br/>分栏1</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-share"></span><br/>分栏2</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-cog"></span><br/>分栏3</a></li>
+            <li>
+				<router-link to="/home">
+					<span class="glyphicon glyphicon-star"></span><br/>首页
+				</router-link>
+			</li>
+            <li>
+				<router-link to="/edit">
+					<span class="glyphicon glyphicon-edit"></span><br/>编辑
+				</router-link>
+			</li>
+            <li>
+				<router-link to="/share">
+					<span class="glyphicon glyphicon-share"></span><br/>分享
+					<span class="badge">0</span>
+				</router-link>
+			</li>
+            <li>
+				<router-link to="/setting">
+					<span class="glyphicon glyphicon-cog"></span><br/>设置
+				</router-link>
+			</li>
         </ul>
 	</div>
 
 
-
-
-	<h1>123</h1>	
+	
     </div>
 </template>
 
@@ -97,6 +113,10 @@
 	color:slateblue;
 }
 .nav li a:hover {
+	background-color: darkslateblue;
+	color: #ffffff;
+}
+.active:hover{
 	background-color: darkslateblue;
 	color: #ffffff;
 }
