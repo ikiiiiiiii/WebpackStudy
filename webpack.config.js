@@ -18,6 +18,11 @@ module.exports = {
         new htmlWebpackPlugin({
             template: path.join(__dirname, './src/index.html'),
             filename: 'index.html'
+        }),
+        new webpack.ProvidePlugin({
+            "$": "jquery",
+            "jQuery": "jquery",
+            "window.jQuery": "jquery"
         })
     ],
     module: {
