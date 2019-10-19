@@ -36,7 +36,9 @@
 
 
         <!-- 中间 路由 区域 -->
-		<router-view></router-view>
+		<transition>
+			<router-view></router-view>
+		</transition>
 
         <!-- 侧边栏区域 -->
 	<div class="left">
@@ -92,8 +94,10 @@
 
 /* 防止导航栏遮住页面内容 */
 .app-container{
+	position: relative;
 	padding-top: 80px;
-	padding-left: 150px;
+	padding-left: 120px;
+	overflow-x: hidden;
 }
 
 /* 左侧菜单栏样式 */
@@ -103,7 +107,6 @@
 	left:0;
 	width:120px;
 	height:100%;
-	margin-right: 20px;
 	background-color:#373737;
 	font-size: 16px;
 	text-align: center;
@@ -112,12 +115,29 @@
 .nav li a{
 	color:slateblue;
 }
+.nav li a:active{
+	background-color: #ffffff;
+	color:slateblue;
+}
 .nav li a:hover {
 	background-color: darkslateblue;
 	color: #ffffff;
 }
-.active:hover{
-	background-color: darkslateblue;
-	color: #ffffff;
+body {
+	background-color: #ffffff;
+}
+.v-enter{
+	opacity: 0;
+	transform: translateX(100%);
+}
+.v-leave-to{
+	opacity: 0;
+	transform: translateX(-100%);
+	position: absolute;
+}
+
+.v-enter-active,
+.v-leave-active{
+	transition: all 0.5s ease;
 }
 </style>

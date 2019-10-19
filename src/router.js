@@ -7,6 +7,7 @@ import setting from './components/tabbar/setting.vue'
 
 var router = new VueRouter({
     routes: [
+        {path: '/', redirect: '/home'},
         {path: '/home', component: home},
         {path: '/edit', component: edit},
         {path: '/share', component: share},

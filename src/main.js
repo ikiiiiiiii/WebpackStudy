@@ -8,9 +8,15 @@ import app from './app.vue'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js'
+
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
+
+import './lib/mui/css/mui.min.css'
+
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
 
 import router from './router.js';
 
