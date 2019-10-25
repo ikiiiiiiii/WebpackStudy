@@ -17,6 +17,12 @@ import './lib/mui/css/mui.min.css'
 
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+Vue.http.options.root = 'http://www.liulongbin.top:3005';
+
+import moment from 'moment'
+Vue.filter('dataFormat', function(dataStr, pattern = "YYYY-MM-DD HH:mm:ss"){
+    return moment(dataStr).format(pattern)
+})
 
 import router from './router.js';
 

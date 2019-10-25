@@ -35,10 +35,10 @@
 		</div>
 
 
-        <!-- 中间 路由 区域 -->
-		<transition>
-			<router-view></router-view>
-		</transition>
+	<!-- 中间 路由 区域 -->
+	<transition>
+		<router-view></router-view>
+	</transition>
 
         <!-- 侧边栏区域 -->
 	<div class="left">
@@ -66,8 +66,6 @@
 			</li>
         </ul>
 	</div>
-
-
 	
     </div>
 </template>
@@ -97,6 +95,7 @@
 	position: relative;
 	padding-top: 80px;
 	padding-left: 120px;
+	padding-bottom: 50px;
 	overflow-x: hidden;
 }
 
