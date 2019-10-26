@@ -15,9 +15,14 @@ Vue.use(MintUI)
 
 import './lib/mui/css/mui.min.css'
 
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
 Vue.http.options.root = 'http://www.liulongbin.top:3005';
+
+Vue.http.options.emulateJSON = true;
 
 import moment from 'moment'
 Vue.filter('dataFormat', function(dataStr, pattern = "YYYY-MM-DD HH:mm:ss"){

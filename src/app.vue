@@ -8,28 +8,6 @@
 	            <div class="navbar-header top2">
 		            <a class="navbar-brand" href="#">这是一个导航栏</a>
 	            </div>
-
-	            <div class="top1">
-		            <ul class="nav navbar-nav navbar-right nav-pills">
-			            <li class="active"><a href="#">home</a></li>
-			            <li><a href="#">栏目二</a></li>
-			            <li class="dropdown">
-				            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					            栏目三：分栏区
-					            <b class="caret"></b>
-				            </a>
-				        <ul class="dropdown-menu">
-					        <li><a href="#">分栏一</a></li>
-					        <li><a href="#">分栏二</a></li>
-					        <li><a href="#">分栏三</a></li>
-					        <li class="divider"></li>
-					        <li><a href="#">分离的链接</a></li>
-					        <li class="divider"></li>
-					        <li><a href="#">另一个分离的链接</a></li>
-				        </ul>
-			            </li>
-		            </ul>
-	            </div>
 	        </div>
         </nav>
 		</div>
@@ -76,13 +54,8 @@
 
 <style>
 /* 修改导航栏高度 */
-.top1 .navbar-nav > li > a{
-    padding-top:30px ; 
-    padding-bottom:0 ;
-    height: 80px;
-}
 .top .navbar {
-    min-height:50px;
+    min-height:80px;
 }
 .top2 .navbar-brand {
     padding-top:30px ; 

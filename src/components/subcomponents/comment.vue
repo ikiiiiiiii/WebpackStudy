@@ -3,8 +3,8 @@
         <br/>
         <h4>发表评论</h4>
         <hr/>
-        <textarea placeholder="请输入要BB的内容" maxlength="120"></textarea>
-        <mt-button class="button1" type="primary">发表评论</mt-button>
+        <textarea placeholder="请输入要BB的内容" maxlength="120" v-model="msg"></textarea>
+        <mt-button class="button1" type="primary" @click="postComment">发表评论</mt-button>
 
         <div class="cmt-list">
             <div class="cmt-item" v-for="(item, i) in comments" :key="item.add_tiem">
@@ -31,7 +31,8 @@ export default {
     data() {
         return {
             pageIndex: 1,
-            comments: []
+            comments: [],
+            msg: ''
         }
     },
     created() {
@@ -51,6 +52,24 @@ export default {
         getMore() {
             this.pageIndex++;
             this.getComments();
+        },
+        postComment() {
+            if(this.msg.trim().length === 0) return Toast("评论内容不能为空！");
+            this.$http
+                .post('api/postcomment/' + this.$route.params.id, {
+                    content:this.msg.trim()
+                })
+                .then(function(result) {
+                    if(result.body.status === 0) {
+                        var cmt = {
+                            user_name: "匿名用户",
+                            add_tiem: Date.now(),
+                            content: this.msg.trim()
+                        };
+                        this.comments.unshift(cmt);
+                        this.msg = "";
+                    }
+                })
         }
     },
     props: ['id']
