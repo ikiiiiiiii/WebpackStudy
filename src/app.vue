@@ -34,7 +34,7 @@
             <li>
 				<router-link to="/share">
 					<span class="glyphicon glyphicon-share"></span><br/>分享
-					<span class="badge">0</span>
+					<span class="badge" id="badge">0</span>
 				</router-link>
 			</li>
             <li>
@@ -52,7 +52,7 @@
 
 </script>
 
-<style>
+<style lang="scss" scoped>
 /* 修改导航栏高度 */
 .top .navbar {
     min-height:80px;

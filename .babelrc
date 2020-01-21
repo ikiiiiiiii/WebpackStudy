@@ -3,5 +3,8 @@
     "plugins": [
         "transform-runtime"
     ],
-    "ignore":["./src/lib/mui/js/mui.js"]
+    "ignore":[
+        "./src/lib/mui/js/mui.js",
+        "./src/lib/mui/js/mui.min.js"
+    ]
 }
